@@ -13,9 +13,14 @@
 	$_CSS = 'http://localhost:7000/Project/Project-01/front-end/css/';
 	$_JS = 'http://localhost:7000/Project/Project-01/front-end/js/';
 	$_IMG = 'http://localhost:7000/Project/Project-01/front-end/images/';
+
 	// Lấy thông tin Website
 	$sql_get_date_web = "SELECT * FROM website";
 	if ($db->num_rows($sql_get_date_web)) {
 		$data_web = $db->fetch_assoc($sql_get_date_web, 1);
 	}
+
+	date_default_timezone_set('Asia/Ho_Chi_Minh');
+	$date_current = '';
+	$date_current = date("Y-m-d H:i:sa");
 ?>

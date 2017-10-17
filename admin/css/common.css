@@ -7,3 +7,9 @@
 .content {
 	margin-top: 10px;
 }
+.feedback table{
+	margin-bottom: 20px;
+}
+.feedback table th{
+	padding: 10px 20px;
+}

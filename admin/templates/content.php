@@ -46,6 +46,11 @@
             // Hiển thị template tài khoản
             require_once 'templates/accounts.php';
         }
+        else if ($tab == 'feedback')
+        {
+            // Hiển thị template tài khoản
+            require_once 'templates/feedback.php';
+        }
     }
     // Ngược lại không có tham số tab
     else

@@ -28,6 +28,10 @@
 
 			$title = $data_cate['label'];
 			// ..
+		} else if ($slug_cate == 'photos') {
+			$title = 'Hình ảnh';
+		} else if ($slug_cate == 'contact') {
+			$title = 'Liên hệ';
 		} else {
 			$title = $title_error_404;
 		}
@@ -47,11 +51,13 @@
 		<link rel="stylesheet" type="text/css" href="<?= $_CSS ?>bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="<?= $_CSS ?>bootstrap-theme.min.css">
 		<link rel="stylesheet" type="text/css" href="<?= $_CSS ?>font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="<?= $_CSS ?>lightbox.min.css">
 		<link rel="stylesheet" type="text/css" href="<?= $_CSS ?>jquery.bxslider.min.css">
 		<link rel="stylesheet" type="text/css" href="<?= $_CSS ?>common.css">
 		
 		<!-- Require JS -->
-		<script src="<?= $_JS ?>jquery.min.js"></script>		
+		<script src="<?= $_JS ?>jquery.min.js"></script>
+
 	</head>
 	<body>
 		<main id="wrapper">

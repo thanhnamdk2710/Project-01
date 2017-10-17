@@ -68,7 +68,7 @@
 						<span class="glyphicon glyphicon-plus"></span> Thêm
 					</a>
 					<a href="'.$_DOMAIN.'accounts" class="btn btn-default">
-						<span class="glyphicon glyphicon-reload"></span> Reload
+						<span class="glyphicon glyphicon-repeat"></span> Reload
 					</a>
 					<a id="lock_acc_list" class="btn btn-warning">
 						<span class="glyphicon glyphicon-lock"></span> Khóa

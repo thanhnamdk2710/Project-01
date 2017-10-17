@@ -49,6 +49,9 @@
 		<a class="list-group-item" href="<?= $_DOMAIN;?>accounts">
 			<span class="glyphicon glyphicon-lock"></span> Tài khoản
 		</a>
+		<a class="list-group-item" href="<?= $_DOMAIN;?>feedback">
+			<span class="glyphicon glyphicon-comment"></span> Góp ý
+		</a>
 		<a class="list-group-item" href="<?= $_DOMAIN;?>setting">
 			<span class="glyphicon glyphicon-cog"></span> Cài đặt chung
 		</a>

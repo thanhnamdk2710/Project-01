@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<!-- Liên kết Bootstrap CSS -->
 	<link rel="stylesheet" href="<?php echo $_DOMAIN; ?>bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="<?php echo $_DOMAIN; ?>bootstrap/css/font-awesome.min.css">
 	<link rel="stylesheet" href="<?php echo $_DOMAIN; ?>css/common.css">
 	<!-- Liên kết thư viện JQuery -->
 	<script src="<?php echo $_DOMAIN; ?>js/jquery.min.js"></script>

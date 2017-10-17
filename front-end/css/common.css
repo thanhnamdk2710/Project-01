@@ -1,10 +1,14 @@
 /********************Body***********************/
+@import url('gallery.css');
 body{
 	background: url('../images/bg.jpg') no-repeat center top;
 	font: 12px/1.4 Arial,Helvetica,sans-serif;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
+}
+a:hover {
+	text-decoration: none;
 }
 img{
 	max-width: 100%;
@@ -49,6 +53,9 @@ a.list-group-item:hover{
 	color: #fff;
 	padding: 0;
 	bottom: 30px;
+}
+.btn-toolbar {
+	margin-top: 20px;
 }
 
 /********************Wrapper***********************/

@@ -9,8 +9,9 @@
 		<!-- End main -->
 
 		<!-- <script src="front-end/js/jquery.form.min.js"></script> -->
-		<script src="front-end/js/bootstrap.min.js"></script>
-		<script src="front-end/js/jquery.bxslider.min.js"></script>
-		<script src="front-end/js/common.js"></script>
+		<script src="<?= $_JS ?>lightbox.min.js"></script>
+		<script src="<?= $_JS ?>bootstrap.min.js"></script>
+		<script src="<?= $_JS ?>jquery.bxslider.min.js"></script>
+		<script src="<?= $_JS ?>common.js"></script>
 	</body>
 </html>

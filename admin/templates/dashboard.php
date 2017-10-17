@@ -166,6 +166,51 @@
 <?php
 	if ($data_user['position'] == '1') {
 ?>
+<!-- Dashboard góp ý -->
+<h3>Góp ý</h3>
+<div class="row">
+	<?php
+	// Lấy tổng góp ý
+	$sql_get_count_feed = "SELECT id_feed FROM feedback";
+	$count_feed = $db->num_rows($sql_get_count_feed);
+
+	echo '
+		<div class="col-md-4">
+			<div class="alert alert-info">
+				<h1>'.$count_feed.'</h1>
+				<p>Tổng số góp ý</p>
+			</div>
+		</div>
+	';
+
+	// Lấy số góp đã xem
+	$sql_get_count_feed_view = "SELECT id_feed FROM feedback WHERE status = '1'";
+	$count_feed_view = $db->num_rows($sql_get_count_feed_view);
+
+	echo '
+		<div class="col-md-4">
+			<div class="alert alert-success">
+				<h1>'.$count_feed_view.'</h1>
+				<p>Góp ý đã xem</p>
+			</div>
+		</div>
+	';
+
+	// Lấy số góp ý chưa xem
+	$sql_get_count_feed_not_view = "SELECT id_feed FROM feedback WHERE status = '0'";
+	$count_feed_not_view = $db->num_rows($sql_get_count_feed_not_view);
+
+	echo '
+		<div class="col-md-4">
+			<div class="alert alert-danger">
+				<h1>'.$count_feed_not_view.'</h1>
+				<p>Góp ý chưa xem</p>
+			</div>
+		</div>
+	';
+	?>
+</div>
+
 <!-- Dashboard tài khoản -->
 <h3>Tài khoản</h3>
 <div class="row">

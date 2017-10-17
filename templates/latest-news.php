@@ -73,17 +73,17 @@
 		</div>
 		<div class="panel-body">
 			<?php
-				$sql_post_news = "SELECT * FROM posts WHERE cate_2_id = $data_cate[id_cate]";
+				$sql_post_news = "SELECT * FROM posts WHERE cate_2_id = $data_cate[id_cate] AND status = 1";
 				$data_post_first = $db->fetch_assoc($sql_post_news, 1);
 			?>
 			<div class="row">
 				<div class="col-md-4">
 					<div class="img-edit">
-						<img src="<?= $data_post_first['url_thumb'] ?>" class="img-thumbnail">
+						<img src="<?= $_DOMAIN.$data_post_first['url_thumb'] ?>" class="img-thumbnail">
 					</div>
 				</div>
 				<div class="col-md-8 title-post">
-					<h4><a href="<?= $_DOMAIN.$data_post_first['title'] ?>"><?= $data_post_first['title'] ?></a></h4>
+					<h4><a href="<?= $_DOMAIN . $data_post_first['slug'] . '-' . $data_post_first['id_post'] ?>.html"><?= $data_post_first['title'] ?></a></h4>
 				</div>
 				<div class="col-md-12 desc-post">
 					<p><?= $data_post_first['descr'] ?></p>
@@ -97,7 +97,7 @@
 							continue;
 						}
 				?>
-				<a class="list-group-item" href="<?= $_DOMAIN.$data_post['slug'] ?>"><span class="fa fa-caret-right"></span>&nbsp; <?= $data_post['title'] ?></a>
+				<a class="list-group-item" href="<?= $_DOMAIN . $data_post['slug']. '-' . $data_post['id_post'] ?>.html"><span class="fa fa-caret-right"></span>&nbsp; <?= $data_post['title'] ?></a>
 				<?php } ?>
 			</div>
 		</div>

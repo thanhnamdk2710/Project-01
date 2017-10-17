@@ -1148,3 +1148,113 @@ $('#formChangePw button').on('click', function() {
         $('#formChangePw .alert').html('Vui lòng điền đầy đủ thông tin.');
     }
 });
+
+/*================================================
+=== View nhiều feedback
+================================================*/
+$('#view_feed_list').on('click', function() {
+    $confirm = confirm('Bạn có chắc đã xem hết các góp ý này không?');
+    if ($confirm == true) {
+        $id_feed = [];
+
+        $('#list_feed input[type="checkbox"]:checkbox:checked').each(function(i) {
+            $id_feed[i] = $(this).val();
+        });
+        if ($id_feed.length === 0) {
+            alert('Vui lòng chọn ít nhất 1 góp ý.');
+        } else {
+            $.ajax({
+                url: $_DOMAIN + 'feedback.php',
+                type: 'POST',
+                data: {
+                    id_feed: $id_feed,
+                    action: 'view_feed_list'
+                }, success: function (data) {
+                    location.reload();
+                }, error: function () {
+                    alert('Đã có lỗi xảy ra, hãy thử lại');
+                }
+            });
+        }
+    } else {
+        return false;
+    }
+});
+
+/*================================================
+=== View 1 feedback
+================================================*/
+$('.view-feed-list').on('click', function() {
+    $confirm = confirm('Bạn có chắc đã xem góp ý này không?');
+    if ($confirm == true) {
+        $id_feed = $(this).attr('data-id');
+
+        $.ajax({
+            url: $_DOMAIN + 'feedback.php',
+            type: 'POST',
+            data: {
+                id_feed: $id_feed,
+                action: 'view_feed'
+            }, success: function (data) {
+                location.href = $_DOMAIN + 'feedback/';
+            }
+        });
+    } else {
+        return false;
+    }
+});
+
+/*================================================
+=== Xóa nhiều feedback cùng lúc
+================================================*/
+$('#del_feed_list').on('click', function() {
+    $confirm = confirm('Bạn có chắc muốn xóa các góp ý đã chọn không?');
+    if ($confirm == true) {
+        $id_feed = [];
+
+        $('#list_feed input[type="checkbox"]:checkbox:checked').each(function(i) {
+            $id_feed[i] = $(this).val();
+        });
+        if ($id_feed.length === 0) {
+            alert('Vui lòng chọn ít nhất 1 góp ý.');
+        } else {
+            $.ajax({
+                url: $_DOMAIN + 'feedback.php',
+                type: 'POST',
+                data: {
+                    id_feed: $id_feed,
+                    action: 'del_feed_list'
+                }, success: function (data) {
+                    location.reload();
+                }, error: function () {
+                    alert('Đã có lỗi xảy ra, hãy thử lại');
+                }
+            });
+        }
+    } else {
+        return false;
+    }
+});
+
+/*================================================
+=== Xóa 1 feedback
+================================================*/
+$('.del-feed-list').on('click', function() {
+    $confirm = confirm('Bạn có chắc muốn xóa góp ý này không?');
+    if ($confirm == true) {
+        $id_feed = $(this).attr('data-id');
+
+        $.ajax({
+            url: $_DOMAIN + 'feedback.php',
+            type: 'POST',
+            data: {
+                id_feed: $id_feed,
+                action: 'del_feed'
+            }, success: function (data) {
+                location.href = $_DOMAIN + 'feedback/';
+            }
+        });
+    } else {
+        return false;
+    }
+});

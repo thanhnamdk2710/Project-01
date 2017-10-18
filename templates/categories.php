@@ -158,6 +158,11 @@
 		</div>
 		<?php
 			}
+		} else {
+			echo '
+				<h2 class="text-danger text-center">OOPS! Trang này không tồn tại</h2>
+				<a href="'.$_DOMAIN.'" class="btn btn-primary">Trở về trang chủ</a>
+			';	
 		}
 		?>
 </article>

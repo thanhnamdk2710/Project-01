@@ -1,4 +1,5 @@
 # Bảo vệ file .htaccess
+ErrorDocument 404 http://localhost:7000/Project/Project-01/404.php
 <Files .htaccess>
 Order Allow,Deny
 Deny from all
